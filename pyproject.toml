@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=59.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skynet-aviation-logistics"
+version = "0.1.0"
+description = "Global Aviation Logistics & Management System - A modular Python console application demonstrating data structures and algorithms"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [
+    {name = "SkyNet Developer"}
+]
+
+[project.scripts]
+skynet = "skynet.main:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "hypothesis>=6.82.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["skynet*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
+
+[tool.hypothesis]
+max_examples = 100
