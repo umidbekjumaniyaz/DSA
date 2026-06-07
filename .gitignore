@@ -23,6 +23,6 @@ env/
 htmlcov/
 .coverage
 
-# Documentation output
-docs/output/*.md
-!docs/output/.gitkeep
+# Documentation output (generated files are now tracked)
+# docs/output/*.md
+# !docs/output/.gitkeep
