@@ -1,0 +1,4 @@
+# Runtime: the SkyNet application uses only the Python 3 standard library.
+# The single third-party dependency below is used exclusively by the
+# property-based test suite (tests/test_properties.py).
+hypothesis==6.155.2
